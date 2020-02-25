@@ -1,0 +1,20 @@
+main {
+    flex: 1;
+    /* Como o app (que está por volta da sidebar e do main) tem um flex-direction: row, eu quero que 
+    o main ocupe todo o espaço que ele tem disponível. */
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+}
+
+@media (max-width: 540px) {
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+
