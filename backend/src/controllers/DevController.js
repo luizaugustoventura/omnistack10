@@ -1,6 +1,7 @@
 const axios = require('axios');
 const Dev = require('../models/Dev');
 const parseStringAsArray = require('../utils/parseStringAsArray');
+const { findConnections, sendMessage } = require('../websocket');
 
 // index, show, store, update, destroy: 5 métodos de um controller. 
 // Não é interessante ter mais de 5!
@@ -37,6 +38,13 @@ module.exports = {
                 techs: techsArray,
                 location
             });
+
+            const sendSocketMessageTo = findConnections(
+                { latitude, longitude},
+                techs
+            );
+
+            sendMessage(sendSocketMessageTo, 'new-dev', dev);
         }
         return response.json(dev);
     }
