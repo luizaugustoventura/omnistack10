@@ -22,6 +22,13 @@
     <li>Expo CLI</li>
 </ul>
 
+<h4>📑 Recursos adicionais: ⌨</h4>
+<ul>
+    <li>
+        Configuração das atualizações em tempo real dentro da aplicação com <strong>Socket.IO</strong>
+    </li>
+</ul>
+
 <h4>📷 Capturas de tela: 📷</h4>
 <table>
     <tr>
